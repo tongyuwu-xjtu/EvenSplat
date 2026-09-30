@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EvenSplat</title>
+  <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+<main>
+  <header class="hero">
+    <div class="container hero-center">
+      <h1>EvenSplat: Coupled 2D--3D Decomposition for Gaussian Splatting under Exposure and Illumination Variation</h1>
+      <p class="venue">arXiv 2026</p>
+      <p class="authors">
+        <span>Tongyu Wu<sup>1</sup></span>,
+        <span>Author B<sup>2</sup></span>,
+        <span>Author C<sup>2</sup></span>,
+        <span>Author D<sup>3</sup></span>
+      </p>
+      <p class="affiliation">
+        <sup>1</sup>Xi'an Jiaotong University &nbsp;&nbsp;
+        <sup>2</sup>Other University &nbsp;&nbsp;
+        <sup>3</sup>Other University
+      </p>
+      <p class="email"><a href="mailto:2234213994@xjtu.stu.edu.cn">2234213994@xjtu.stu.edu.cn</a></p>
+      <div class="hero-links">
+        <a class="pill" href="paper/paper.pdf">Paper</a>
+        <a class="pill" href="#">arXiv</a>
+        <span class="pill muted">Code · Releasing Soon</span>
+        <span class="pill muted">Data · Releasing Soon</span>
+      </div>
+    </div>
+  </header>
+  <section class="section intro-section" id="abstract-section">
+    <div class="container abstract-container">
+      <h2 class="abstract-title" id="abstract-title">Abstract</h2>
+
+      <p class="body-text abstract-body" id="abstract-text">
+        Multi-view reconstruction under changing exposure and spatially uneven illumination often entangles capture-specific lighting with scene appearance. EvenSplat addresses this problem by coupling an image-space illumination decomposition with a Gaussian-level illumination field, while camera-response correction and local exposure compensation absorb image-specific residuals. The method targets three challenging settings—cross-view exposure variation (CEV), spatial illumination variation (SIV), and high-contrast illumination (HCI)—and consistently improves illumination-robust novel-view synthesis, with particularly strong gains under high-contrast lighting.
+      </p>
+
+      <div class="abstract-teaser">
+        <img class="teaser-figure" src="static/images/teaser.jpg" alt="EvenSplat teaser">
+      </div>
+    </div>
+  </section>
+
+  <section class="section figure-section" id="training-section">
+    <div class="container">
+      <h2 id="training-title">Training Images :</h2>
+      <p class="section-intro" id="training-text"></p>
+      <img class="paper-figure compact-figure" id="training-image" src="static/images/training_images.jpg" alt="Training images">
+    </div>
+  </section>
+
+  <section class="section comparison-section" id="novel-view-results">
+    <div class="container">
+      <h2 id="novel-title">Novel View Synthesis Results :</h2>
+<div class="comparison-shell">
+        <div class="comparison-viewport" id="comparisonViewport" tabindex="0">
+          <div class="comparison-track">
+            <article class="scene-column video-pair" data-scene="scene1">
+              <div class="scene-title">Scene 1</div>
+              <div class="video-box">
+                <div class="video-overlay-label">3DGS</div>
+                <video class="comparison-video master" muted playsinline preload="metadata"><source src="static/videos/scene1_3dgs.mp4" type="video/mp4"></video>
+              </div>
+              <div class="video-box">
+                <div class="video-overlay-label">EvenSplat</div>
+                <video class="comparison-video follower" muted playsinline preload="metadata"><source src="static/videos/scene1_evensplat.mp4" type="video/mp4"></video>
+              </div>
+              <div class="pair-controls">
+                <button class="play-toggle" type="button" aria-label="Play both videos">▶</button>
+                <span class="time current">0:00</span>
+                <input class="timeline" type="range" min="0" max="1000" value="0" step="1" aria-label="Video progress">
+                <span class="time duration">0:00</span>
+              </div>
+            </article>
+            <article class="scene-column video-pair" data-scene="scene2">
+              <div class="scene-title">Scene 2</div>
+              <div class="video-box">
+                <div class="video-overlay-label">3DGS</div>
+                <video class="comparison-video master" muted playsinline preload="metadata"><source src="static/videos/scene2_3dgs.mp4" type="video/mp4"></video>
+              </div>
+              <div class="video-box">
+                <div class="video-overlay-label">EvenSplat</div>
+                <video class="comparison-video follower" muted playsinline preload="metadata"><source src="static/videos/scene2_evensplat.mp4" type="video/mp4"></video>
+              </div>
+              <div class="pair-controls">
+                <button class="play-toggle" type="button" aria-label="Play both videos">▶</button>
+                <span class="time current">0:00</span>
+                <input class="timeline" type="range" min="0" max="1000" value="0" step="1" aria-label="Video progress">
+                <span class="time duration">0:00</span>
+              </div>
+            </article>
+            <article class="scene-column video-pair" data-scene="scene3">
+              <div class="scene-title">Scene 3</div>
+              <div class="video-box">
+                <div class="video-overlay-label">3DGS</div>
+                <video class="comparison-video master" muted playsinline preload="metadata"><source src="static/videos/scene3_3dgs.mp4" type="video/mp4"></video>
+              </div>
+              <div class="video-box">
+                <div class="video-overlay-label">EvenSplat</div>
+                <video class="comparison-video follower" muted playsinline preload="metadata"><source src="static/videos/scene3_evensplat.mp4" type="video/mp4"></video>
+              </div>
+              <div class="pair-controls">
+                <button class="play-toggle" type="button" aria-label="Play both videos">▶</button>
+                <span class="time current">0:00</span>
+                <input class="timeline" type="range" min="0" max="1000" value="0" step="1" aria-label="Video progress">
+                <span class="time duration">0:00</span>
+              </div>
+            </article>
+            <article class="scene-column video-pair" data-scene="scene4">
+              <div class="scene-title">Scene 4</div>
+              <div class="video-box">
+                <div class="video-overlay-label">3DGS</div>
+                <video class="comparison-video master" muted playsinline preload="metadata"><source src="static/videos/scene4_3dgs.mp4" type="video/mp4"></video>
+              </div>
+              <div class="video-box">
+                <div class="video-overlay-label">EvenSplat</div>
+                <video class="comparison-video follower" muted playsinline preload="metadata"><source src="static/videos/scene4_evensplat.mp4" type="video/mp4"></video>
+              </div>
+              <div class="pair-controls">
+                <button class="play-toggle" type="button" aria-label="Play both videos">▶</button>
+                <span class="time current">0:00</span>
+                <input class="timeline" type="range" min="0" max="1000" value="0" step="1" aria-label="Video progress">
+                <span class="time duration">0:00</span>
+              </div>
+            </article>
+            <article class="scene-column video-pair" data-scene="scene5">
+              <div class="scene-title">Scene 5</div>
+              <div class="video-box">
+                <div class="video-overlay-label">3DGS</div>
+                <video class="comparison-video master" muted playsinline preload="metadata"><source src="static/videos/scene5_3dgs.mp4" type="video/mp4"></video>
+              </div>
+              <div class="video-box">
+                <div class="video-overlay-label">EvenSplat</div>
+                <video class="comparison-video follower" muted playsinline preload="metadata"><source src="static/videos/scene5_evensplat.mp4" type="video/mp4"></video>
+              </div>
+              <div class="pair-controls">
+                <button class="play-toggle" type="button" aria-label="Play both videos">▶</button>
+                <span class="time current">0:00</span>
+                <input class="timeline" type="range" min="0" max="1000" value="0" step="1" aria-label="Video progress">
+                <span class="time duration">0:00</span>
+              </div>
+            </article>
+            <article class="scene-column video-pair" data-scene="scene6">
+              <div class="scene-title">Scene 6</div>
+              <div class="video-box">
+                <div class="video-overlay-label">3DGS</div>
+                <video class="comparison-video master" muted playsinline preload="metadata"><source src="static/videos/scene6_3dgs.mp4" type="video/mp4"></video>
+              </div>
+              <div class="video-box">
+                <div class="video-overlay-label">EvenSplat</div>
+                <video class="comparison-video follower" muted playsinline preload="metadata"><source src="static/videos/scene6_evensplat.mp4" type="video/mp4"></video>
+              </div>
+              <div class="pair-controls">
+                <button class="play-toggle" type="button" aria-label="Play both videos">▶</button>
+                <span class="time current">0:00</span>
+                <input class="timeline" type="range" min="0" max="1000" value="0" step="1" aria-label="Video progress">
+                <span class="time duration">0:00</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+      <div class="scroll-hint">← drag / mouse wheel / trackpad →</div>
+      <p class="video-caption below-video-text" id="novel-text">Novel view synthesis (NVS) results under challenging lighting conditions, including cross-view exposure variation (CEV), spatial illumination variation (SIV), and high-contrast illumination (HCI). <em>Up</em>: 3D Gaussian Splatting. <em>Bottom</em>: Our proposed EvenSplat.</p>
+    </div>
+  </section>
+
+  <section class="section figure-section" id="method-section">
+    <div class="container">
+      <h2 id="method-title">Method</h2>
+      <img class="paper-figure compact-figure" id="method-image" src="static/images/method.jpg" alt="EvenSplat method overview">
+      <p class="section-intro below-image-text" id="method-text">EvenSplat jointly optimizes an image-space decomposition branch and a Gaussian-level illumination field. Illumination alignment couples the 2D and 3D representations, while CRN and ILEC absorb global and spatial image-specific photometric residuals during training.</p>
+    </div>
+  </section>
+
+  <section class="section figure-section" id="real-section">
+    <div class="container">
+      <h2 id="real-title">Real-world Results</h2>
+      <img class="paper-figure compact-figure" id="real-image" src="static/images/real_results.jpg" alt="Real-world results">
+      <p class="section-intro below-image-text" id="real-text">On Results on our real-world benchmark under CEV, SIV, and HCI settings, with comparisons against previous state-of-the-art methods.</p>
+    </div>
+  </section>
+
+  <section class="section figure-section" id="sim-section">
+    <div class="container">
+      <h2 id="sim-title">Simulated Results</h2>
+      <img class="paper-figure compact-figure" id="sim-image" src="static/images/simulated_results.jpg" alt="Simulated results">
+      <p class="section-intro below-image-text" id="sim-text">We Results on six Mip-NeRF 360 scenes with simulated CEV, SIV, and HCI perturbations, with comparisons against previous state-of-the-art methods.</p>
+    </div>
+  </section>
+
+  <!-- <section class="section compact-section" id="bibtex-section">
+    <div class="container text-container">
+      <h2 id="bibtex-title">BibTeX</h2>
+      <pre class="bibtex">@article{evensplat2026,
+  title={EvenSplat},
+  author={Author Name and Author Name and Author Name},
+  year={2026}
+}</pre>
+    </div>
+  </section> -->
+
+
+</main>
+<script src="static/js/site.js"></script>
+</body>
+</html>
