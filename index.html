@@ -49,8 +49,8 @@
         a single image, and locally strong light sources leave one region bright and its neighbor in shadow.
         Multi-view reconstruction methods such as 3D Gaussian Splatting treat these lighting artifacts as if
         they were properties of the scene, entangling capture-specific illumination with the geometry and color
-        they recover. We present EvenSplat, a framework that separates the two. EvenSplat couples an image-
-        space illumination decomposition with an illumination field carried by the Gaussians, so that the same
+        they recover. We present EvenSplat, a framework that separates the two. EvenSplat couples an image-space 
+        illumination decomposition with an illumination field carried by the Gaussians, so that the same
         explanation of the lighting is shared between the two-dimensional and three-dimensional views of the
         scene; a camera-response network and a local exposure-compensation module absorb the global and
         residual differences that remain across training images. Through extensive experiments across multiple
