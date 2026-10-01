@@ -193,7 +193,11 @@
     <div class="container">
       <h2 id="method-title">Method</h2>
       <img class="paper-figure compact-figure" id="method-image" src="static/images/method.jpg" alt="EvenSplat method overview">
-      <p class="section-intro below-image-text" id="method-text">EvenSplat jointly optimizes an image-space decomposition branch and a Gaussian-level illumination field. Illumination alignment couples the 2D and 3D representations, while CRN and ILEC absorb global and spatial image-specific photometric residuals during training.</p>
+      <p class="section-intro below-image-text" id="method-text">
+        EvenSplat couples image-space decomposition with Gaussian-level illumination. Illumination
+        alignment and image recombination connect the branches. CRN and ILEC absorb global and spatial
+        training-image residuals. Base appearance is distinguished from the observation-fitting path.
+      </p>
     </div>
   </section>
 
@@ -201,7 +205,11 @@
     <div class="container">
       <h2 id="real-title">Real-world Results</h2>
       <img class="paper-figure compact-figure" id="real-image" src="static/images/real_results.jpg" alt="Real-world results">
-      <p class="section-intro below-image-text" id="real-text">On Results on our real-world benchmark under CEV, SIV, and HCI settings, with comparisons against previous state-of-the-art methods.</p>
+      <p class="section-intro below-image-text" id="real-text">
+      Real-world comparisons. Columns show 3DGS, 3DGS+CHROMA, GS-W, Bilateral Grid, PPISP,
+      Luminance-GS, EvenSplat, and the captured reference. Rows 1–2 show HCI, rows 3–4 SIV, and rows 5–6
+      CEV. EvenSplat most clearly separates appearance from illumination in the spatially uneven HCI and SIV.
+      </p>
     </div>
   </section>
 
@@ -209,7 +217,10 @@
     <div class="container">
       <h2 id="sim-title">Simulated Results</h2>
       <img class="paper-figure compact-figure" id="sim-image" src="static/images/simulated_results.jpg" alt="Simulated results">
-      <p class="section-intro below-image-text" id="sim-text">We Results on six Mip-NeRF 360 scenes with simulated CEV, SIV, and HCI perturbations, with comparisons against previous state-of-the-art methods.</p>
+      <p class="section-intro below-image-text" id="sim-text">
+        Simulated HCI, SIV, and CEV comparisons. EvenSplat reduces illumination leakage while retain-ing 
+        scene texture; HCI remains the most challenging setting because contrast amplification clips information.
+      </p>
     </div>
   </section>
 
